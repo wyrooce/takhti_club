@@ -39,6 +39,6 @@ public class Main extends Application{
         JSONObject obj = new JSONObject();
         obj.put("salaam", "salaam2");
         System.out.println(obj.toString());
-        //launch(args);
+        launch(args);
     }
 }

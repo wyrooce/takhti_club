@@ -68,8 +68,8 @@
                         </Pane>
                         <TableView fx:id="todayTraining" layoutX="431.0" layoutY="248.0" prefHeight="330.0" prefWidth="630.0">
                           <columns>
-                            <TableColumn prefWidth="220.0" text="نام عضو" />
-                            <TableColumn prefWidth="133.0" text="ساعت ورود" />
+                            <TableColumn prefWidth="214.0" text="نام عضو" />
+                            <TableColumn prefWidth="139.0" text="ساعت ورود" />
                               <TableColumn prefWidth="140.0" text="ساعت خروج" />
                               <TableColumn prefWidth="136.0" text="نوع عضویت" />
                           </columns>
@@ -127,7 +127,7 @@
                            <children>
                               <ImageView fitHeight="241.0" fitWidth="200.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../../Desktop/User-icon.png" />
+                                    <Image url="@../../../../../Desktop/User-icon.png" />
                                  </image>
                               </ImageView>
                               <Button layoutX="24.0" layoutY="293.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="175.0" text="تغییر عکس">

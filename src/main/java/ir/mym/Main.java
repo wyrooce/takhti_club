@@ -27,7 +27,7 @@ public class Main extends Application{
         briefSession = FXCollections.observableArrayList();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("ir/wyrooce/view/takhti_mainForm.fxml"));
-        Parent root = loader.load();
+        Parent root = (Parent) loader.load();
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 690, 570));
 //        MainFormCtrl controller = loader.getController();

@@ -29,6 +29,13 @@ public class TodayTraining {
         this.membershipType = new SimpleStringProperty(session.member.membershipType);
     }
 
+    @Override
+    public String toString() {
+        return "TodayTraining{" +
+                "name=" + name +
+                '}';
+    }
+
     public String getName() {
         return name.get();
     }

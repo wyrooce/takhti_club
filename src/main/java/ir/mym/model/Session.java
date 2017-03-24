@@ -12,4 +12,15 @@ public class Session {
     public Time exitTime;
     public int commodeNo;
     public Date date;
+
+    @Override
+    public String toString() {
+        return "Session{" +
+                "member=" + member.firstname+" "+member.lastname +
+                ", entranceTime=" + entranceTime +
+                ", exitTime=" + exitTime +
+                ", commodeNo=" + commodeNo +
+                ", date=" + date +
+                '}';
+    }
 }

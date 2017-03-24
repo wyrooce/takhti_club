@@ -18,7 +18,8 @@ public class MainApp extends Application {
             primaryStage.show();
         }
         catch(Exception e){
-            e.printStackTrace();}
+            e.printStackTrace();
+        }
     }
 
 

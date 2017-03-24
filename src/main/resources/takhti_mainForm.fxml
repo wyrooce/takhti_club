@@ -28,35 +28,35 @@
                      <children>
                         <Pane layoutX="5.0" layoutY="19.0" prefHeight="559.0" prefWidth="413.0" style="-fx-border-width: 3; -fx-border-color: white;">
                            <children>
-                              <TextField alignment="TOP_CENTER" layoutX="18.0" layoutY="35.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="115.0" prefWidth="368.0">
+                              <TextField onAction="#trainingClk" fx:id="membershipIdInput" alignment="TOP_CENTER" layoutX="18.0" layoutY="35.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="115.0" prefWidth="368.0">
                                  <font>
                                     <Font size="64.0" />
                                  </font>
                               </TextField>
                               <Text layoutX="19.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="شناسه عضویت" wrappingWidth="104.0" />
                               <Text layoutX="20.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="شماره شناسایی ملی" wrappingWidth="134.0" />
-                              <TextField alignment="TOP_CENTER" layoutX="23.0" layoutY="187.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="42.0" prefWidth="363.0">
+                              <TextField onAction="#trainingClk" fx:id="melliCodeInput" alignment="TOP_CENTER" layoutX="23.0" layoutY="187.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="42.0" prefWidth="363.0">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
                               </TextField>
-                              <TextField alignment="TOP_CENTER" layoutX="25.0" layoutY="268.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="42.0" prefWidth="363.0">
+                              <TextField fx:id="nameInput" onAction="#trainingClk" alignment="TOP_CENTER" layoutX="25.0" layoutY="268.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="42.0" prefWidth="363.0">
                                  <font>
                                     <Font name="B Yekan" size="24.0" />
                                  </font>
                               </TextField>
                               <Text layoutX="27.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="نام خانوادگی" wrappingWidth="97.0" />
-                              <Button layoutX="31.0" layoutY="413.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="348.0" text="تمرین" textAlignment="CENTER">
+                              <Button fx:id="trainingBtn" layoutX="31.0" layoutY="413.0" mnemonicParsing="false" onAction="#trainingClk" prefHeight="63.0" prefWidth="348.0" text="تمرین" textAlignment="CENTER">
                                  <font>
                                     <Font name="B Yekan" size="27.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="206.0" layoutY="481.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="173.0" text="ثبت نام">
+                              <Button layoutX="206.0" layoutY="481.0" mnemonicParsing="false" onAction="#registerClk" prefHeight="64.0" prefWidth="173.0" text="ثبت نام">
                                  <font>
                                     <Font name="B Yekan" size="25.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="30.0" layoutY="481.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="172.0" text="خرید">
+                              <Button layoutX="30.0" layoutY="481.0" mnemonicParsing="false" onAction="#buyClk" prefHeight="64.0" prefWidth="172.0" text="خرید">
                                  <font>
                                     <Font name="B Yekan" size="25.0" />
                                  </font>
@@ -66,12 +66,12 @@
                               <ColorAdjust brightness="-0.07" contrast="-0.1" hue="-0.1" saturation="-0.1" />
                            </effect>
                         </Pane>
-                        <TableView fx:id="todayTraining" layoutX="431.0" layoutY="248.0" prefHeight="330.0" prefWidth="630.0">
+                        <TableView fx:id="todayTrainingTbl" layoutX="431.0" layoutY="248.0" prefHeight="330.0" prefWidth="630.0">
                           <columns>
-                            <TableColumn prefWidth="214.0" text="نام عضو" />
-                            <TableColumn prefWidth="139.0" text="ساعت ورود" />
-                              <TableColumn prefWidth="140.0" text="ساعت خروج" />
-                              <TableColumn prefWidth="136.0" text="نوع عضویت" />
+                            <TableColumn fx:id="nameCol" prefWidth="214.0" text="نام عضو" />
+                            <TableColumn fx:id="enterTimeCol" prefWidth="139.0" text="ساعت ورود" />
+                              <TableColumn fx:id="exitTimeCol" prefWidth="140.0" text="ساعت خروج" />
+                              <TableColumn fx:id="membershipTypeCol" prefWidth="136.0" text="نوع عضویت" />
                           </columns>
                         </TableView>
                      </children>

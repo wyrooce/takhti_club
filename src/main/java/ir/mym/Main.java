@@ -14,31 +14,15 @@ import jdk.nashorn.api.scripting.JSObject;
 import org.json.simple.JSONObject;
 
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.Date;
 
 /**
  * Created by mym on 1/27/17.
  */
-public class Main extends Application{
-    public static ObservableList<TodayTraining> briefSession;
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        briefSession = FXCollections.observableArrayList();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ir/wyrooce/view/takhti_mainForm.fxml"));
-        Parent root = (Parent) loader.load();
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 690, 570));
-//        MainFormCtrl controller = loader.getController();
-//        controller.setTodayTrainingList(briefSession);
-        primaryStage.show();
-    }
+public class Main{
 
     public static void main(String[] args) {
-        JSONObject obj = new JSONObject();
-        obj.put("salaam", "salaam2");
-        System.out.println(obj.toString());
-        launch(args);
     }
 }

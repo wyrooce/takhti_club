@@ -4,6 +4,7 @@ import ir.mym.model.Member;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.sql.Time;
 
@@ -17,10 +18,12 @@ public class TrainingCtrl {
     private Member member;
 
     public void confirmClk(ActionEvent actionEvent) {
+
     }
 
     public void ignoreClk(ActionEvent actionEvent) {
-
+        Stage stage = (Stage) timeOutput.getScene().getWindow();
+        stage.close();
     }
 
     public void setMember(Member member) {

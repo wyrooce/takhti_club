@@ -8,14 +8,15 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+
 /**
  * Created by mym on 1/31/17.
  */
 public class TodayTraining {
     private final StringProperty name;
     private final StringProperty enterTime;
-    private final StringProperty exitTime;
-    private final StringProperty membershipType;
+    private  StringProperty exitTime;
+    private  StringProperty membershipType;
 
     /**
      * Default constructor.
@@ -23,10 +24,12 @@ public class TodayTraining {
 
 
     public TodayTraining(Session session) {
-        this.name = new SimpleStringProperty(session.member.firstname+" "+session.member.lastname);
+        this.name = new SimpleStringProperty(session.member.firstname + " " + session.member.lastname);
         this.enterTime = new SimpleStringProperty(session.entranceTime.toString());
-        this.exitTime = new SimpleStringProperty(session.exitTime.toString());
-        this.membershipType = new SimpleStringProperty(session.member.membershipType);
+        if (session.exitTime != null)
+            this.exitTime = new SimpleStringProperty(session.exitTime.toString());
+        if (session.member.getMembershipType() != null)
+            this.membershipType = new SimpleStringProperty(session.member.membershipType);
     }
 
     @Override

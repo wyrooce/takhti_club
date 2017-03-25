@@ -13,10 +13,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
+import java.io.IOException;
 import java.sql.Date;
 import java.sql.Time;
+import java.util.ArrayList;
+import java.util.Optional;
 
 /**
  * Created by mym on 1/31/17.
@@ -94,14 +101,30 @@ public class MainFormCtrl {
         }
         if (member != null) {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("takhti_training.fxml"));
-                Parent root = (Parent) fxmlLoader.load();
-                TrainingCtrl trainingCtrl = fxmlLoader.<TrainingCtrl>getController();
-                trainingCtrl.setMember(member);
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root));
-                stage.show();
+//                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("takhti_training.fxml"));
+//                Parent root = (Parent) fxmlLoader.load();
+//                TrainingCtrl trainingCtrl = fxmlLoader.<TrainingCtrl>getController();
+//                trainingCtrl.setMember(member);
+//                Stage stage = new Stage();
+//                stage.setScene(new Scene(root));
+//                stage.show();
+                ArrayList<Member> foundMembers = new ArrayList<>();
+                foundMembers.add(member);
+                Dialog<Integer> dialog = enterTraining(foundMembers);
+                Optional<Integer> result = dialog.showAndWait();
+                if (result.isPresent()) {
+                    int res = result.get();
+                    if (res != -1){
+                        Session session = new Session();
+                        session.member = foundMembers.get(res);
+                        session.entranceTime = new Time(System.currentTimeMillis());
+                        TodayTraining tt = new TodayTraining(session);
 
+                        trainingsDS.add(tt);
+                        todayTrainingTbl.getItems().add(tt);
+                    }
+                }
+                dialog.close();
             } catch(Exception e) {
                 e.printStackTrace();
             }
@@ -133,5 +156,49 @@ public class MainFormCtrl {
         } catch(Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private Dialog<Integer> enterTraining(ArrayList<Member> mems) throws IOException {
+        Dialog<Integer> dialog = new Dialog<>();
+        dialog.setTitle("شروع تمرین");
+        dialog.setHeaderText("سلام");
+        dialog.setResizable(false);
+
+        Label label1 = new Label("آیا تایید می‌کنید؟");
+        ComboBox<String> name = new ComboBox<>();
+        Text time = new Text(System.currentTimeMillis()+"");
+        name.setPromptText(mems.get(0).getFirstname()+" "+mems.get(0).getLastname());
+        ComboBox<Integer> commode = new ComboBox<>();
+        commode.setPromptText(1+"");
+        ImageView image = new ImageView();
+
+
+        GridPane grid = new GridPane();
+        grid.add(image, 1, 1);
+        grid.add(label1, 1, 2);
+        grid.add(name, 1, 3);
+        grid.add(time, 1, 5);
+        grid.add(commode, 1, 4);
+        grid.setHgap(5);
+        grid.setVgap(5);
+        dialog.getDialogPane().setContent(grid);
+
+        ButtonType buttonTypeConfirm = new ButtonType("تایید", ButtonBar.ButtonData.OK_DONE);
+        ButtonType buttonTypeIgnore = new ButtonType("بی‌خیال", ButtonBar.ButtonData.CANCEL_CLOSE);
+        dialog.getDialogPane().getButtonTypes().add(buttonTypeConfirm);
+        dialog.getDialogPane().getButtonTypes().add(buttonTypeIgnore);
+
+        dialog.setResultConverter(new Callback<ButtonType, Integer>() {
+            @Override
+            public Integer call(ButtonType b) {
+                if (b == buttonTypeConfirm){
+                    return 0;
+                }else if (b == buttonTypeIgnore){
+                    return -1;
+                }
+                return -1;
+            }
+        });
+        return dialog;
     }
 }

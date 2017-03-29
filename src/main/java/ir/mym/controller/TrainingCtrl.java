@@ -28,7 +28,7 @@ public class TrainingCtrl {
 
     public void setMember(Member member) {
         this.member = member;
-        nameOutput.setText(member.getFirstname()+" "+member.getLastname());
+        nameOutput.setText(member.getFirstName()+" "+member.getLastName());
         timeOutput.setText(String.valueOf(new Time(System.nanoTime())));
     }
 }

@@ -1,13 +1,18 @@
 package ir.mym;
 
+import ir.mym.model.Connector;
+import ir.mym.model.Setting;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MainApp extends Application {
+import java.sql.SQLException;
 
+public class Besmellah extends Application {
+    public static Setting setting;
+    public static Connector connector;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -23,7 +28,10 @@ public class MainApp extends Application {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+        connector = new Connector();
+        setting = new Setting();
+        setting.load();
         launch(args);
     }
 }

@@ -8,7 +8,7 @@ import java.sql.DriverManager;
  */
 public class Connector {
 
-    public static Connection getConnection() {
+    public Connection getConnection() {
         Connection connection = null;
         try {
             Class.forName("org.sqlite.JDBC");
@@ -17,8 +17,6 @@ public class Connector {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             return null;
         }
-
-        System.out.println("Opened database successfully");
         return connection;
     }
 

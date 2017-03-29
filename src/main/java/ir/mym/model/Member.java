@@ -1,6 +1,7 @@
 package ir.mym.model;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -8,22 +9,31 @@ import java.util.Date;
  */
 public class Member{//agha mojtaba
     public int credit;
-    public String firstname;
-    public String lastname;
+    public String firstName;
+    public String lastName;
     public String identificationNo;//melli code
-    public int takhtiID;
-    public String membershipType;//jalasei, mahi
+    public int clubID;
+    public boolean monthly;//jalasei, mahi
     public boolean aerobiotic;
+    public boolean boxer;
     public int birthYear;
     public String phoneNo;
-    public String telegramID;
-    public String picturePath;
-    public ArrayList<Date> mebershipDate;
+    public String telegramId;
+    public String imagePath;
+    public boolean gender;//true = male, false= female
+    public Date registerDate;
+    public Date expireMembershipDate;
     public ArrayList<SportProgram> programs;
 
-    public Member(String firstname, String lastname) {
-        this.firstname = firstname;
-        this.lastname = lastname;
+    public Member(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        registerDate = new Date();
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(registerDate);
+        cal.add(Calendar.DATE, 30); //minus number would decrement the days
+        expireMembershipDate = cal.getTime();
     }
 
     public int getCredit() {
@@ -34,20 +44,24 @@ public class Member{//agha mojtaba
         this.credit = credit;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public void increaseCredit(int offset){
+        credit += offset;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getIdentificationNo() {
@@ -58,20 +72,20 @@ public class Member{//agha mojtaba
         this.identificationNo = identificationNo;
     }
 
-    public int getTakhtiID() {
-        return takhtiID;
+    public int getClubID() {
+        return clubID;
     }
 
-    public void setTakhtiID(int takhtiID) {
-        this.takhtiID = takhtiID;
+    public void setClubID(int clubID) {
+        this.clubID = clubID;
     }
 
-    public String getMembershipType() {
-        return membershipType;
+    public boolean isMonthly() {
+        return monthly;
     }
 
-    public void setMembershipType(String membershipType) {
-        this.membershipType = membershipType;
+    public void setMonthly(boolean monthly) {
+        this.monthly = monthly;
     }
 
     public boolean isAerobiotic() {
@@ -80,6 +94,14 @@ public class Member{//agha mojtaba
 
     public void setAerobiotic(boolean aerobiotic) {
         this.aerobiotic = aerobiotic;
+    }
+
+    public boolean isBoxer() {
+        return boxer;
+    }
+
+    public void setBoxer(boolean boxer) {
+        this.boxer = boxer;
     }
 
     public int getBirthYear() {
@@ -98,45 +120,63 @@ public class Member{//agha mojtaba
         this.phoneNo = phoneNo;
     }
 
-    public String getTelegramID() {
-        return telegramID;
+    public String getTelegramId() {
+        return telegramId;
     }
 
-    public void setTelegramID(String telegramID) {
-        this.telegramID = telegramID;
+    public void setTelegramId(String telegramId) {
+        this.telegramId = telegramId;
     }
 
-    public String getPicturePath() {
-        return picturePath;
+    public String getImagePath() {
+        return imagePath;
     }
 
-    public void setImagePath(String picturePath) {
-        this.picturePath = picturePath;
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
-    public ArrayList<Date> getMebershipDate() {
-        return mebershipDate;
+    public boolean getGender() {
+        return gender;
     }
 
-    public void setMebershipDate(ArrayList<Date> mebershipDate) {
-        this.mebershipDate = mebershipDate;
+    public void setGender(boolean gender) {
+        this.gender = gender;
     }
 
-    @Override
-    public String toString() {
-        return "Member{" +
-                "credit=" + credit +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", identificationNo='" + identificationNo + '\'' +
-                ", takhtiID=" + takhtiID +
-                ", membershipType='" + membershipType + '\'' +
-                ", aerobiotic=" + aerobiotic +
-                ", birthYear=" + birthYear +
-                ", phoneNo='" + phoneNo + '\'' +
-                ", telegramID='" + telegramID + '\'' +
-                ", picturePath='" + picturePath + '\'' +
-                ", mebershipDate=" + mebershipDate +
-                '}';
+    public Date getRegisterDate() {
+        return registerDate;
+    }
+
+    public Date getRegisterSQLDate() {
+        return new java.sql.Date(registerDate.getTime());
+    }
+
+    public void setRegisterDate(Date registerDate) {
+        this.registerDate = registerDate;
+    }
+
+    public Date getExpireMembershipDate() {
+        return expireMembershipDate;
+    }
+
+    public void setExpireMembershipDate(Date expireMembershipDate) {
+        this.expireMembershipDate = expireMembershipDate;
+    }
+
+    public ArrayList<SportProgram> getPrograms() {
+        return programs;
+    }
+
+    public void setPrograms(ArrayList<SportProgram> programs) {
+        this.programs = programs;
+    }
+
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
+
+    public java.sql.Date getExpireMembershipSQLDate() {
+        return new java.sql.Date(expireMembershipDate.getTime());
     }
 }

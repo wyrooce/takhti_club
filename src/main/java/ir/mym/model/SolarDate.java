@@ -1,6 +1,10 @@
 package ir.mym.model;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by mym on 1/27/17.
@@ -10,6 +14,8 @@ public class SolarDate {
 
     public String strWeekDay = "";
     public String strMonth = "";
+    public static String[] yearMonths = {"فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند"};
+    public static String[] weekDay = {"یک‌شنبه","دوشنبه","سه‌شنبه","چهارشنبه","پنج‌شنبه","جمعه", "شنبه"};
 
     int date;
     int month;
@@ -18,6 +24,24 @@ public class SolarDate {
     public SolarDate() {
         Date MiladiDate = new Date();
         calcSolarCalendar(MiladiDate);
+    }
+
+    public static String diffTime(long ts, long tf) {
+        long diff = tf - ts;
+        long sec, min, hour;
+        diff /= 1000;
+        hour = diff / 3600;
+        diff = diff - hour * 3600;
+        min = diff / 60;
+        diff = diff - min * 60;
+        return hour + ":" + min + ":" + diff;
+    }
+
+    public static Date toDate(String date) throws ParseException {
+        if (date == null)return null;
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+        Date newDate = format.parse(date);
+        return newDate;
     }
 
     public SolarDate(Date MiladiDate) {
@@ -168,75 +192,16 @@ public class SolarDate {
             }
 
         }
-
-        switch (month) {
-            case 1:
-                strMonth = "فروردين";
-                break;
-            case 2:
-                strMonth = "ارديبهشت";
-                break;
-            case 3:
-                strMonth = "خرداد";
-                break;
-            case 4:
-                strMonth = "تير";
-                break;
-            case 5:
-                strMonth = "مرداد";
-                break;
-            case 6:
-                strMonth = "شهريور";
-                break;
-            case 7:
-                strMonth = "مهر";
-                break;
-            case 8:
-                strMonth = "آبان";
-                break;
-            case 9:
-                strMonth = "آذر";
-                break;
-            case 10:
-                strMonth = "دي";
-                break;
-            case 11:
-                strMonth = "بهمن";
-                break;
-            case 12:
-                strMonth = "اسفند";
-                break;
-        }
-
-        switch (WeekDay) {
-
-            case 0:
-                strWeekDay = "يکشنبه";
-                break;
-            case 1:
-                strWeekDay = "دوشنبه";
-                break;
-            case 2:
-                strWeekDay = "سه شنبه";
-                break;
-            case 3:
-                strWeekDay = "چهارشنبه";
-                break;
-            case 4:
-                strWeekDay = "پنج شنبه";
-                break;
-            case 5:
-                strWeekDay = "جمعه";
-                break;
-            case 6:
-                strWeekDay = "شنبه";
-                break;
-        }
-
+        strMonth = yearMonths[month-1];
+        strWeekDay = weekDay[WeekDay];
     }
 
-    public String toString(){
-        return this.year+"/"+this.month+"/"+this.date;
+    public String fullString(){
+        return this.date + " " + this.strMonth + " " + this.year;
+    }
+
+    public String toString() {
+        return this.year + "/" + this.month + "/" + this.date;
     }
 }
 

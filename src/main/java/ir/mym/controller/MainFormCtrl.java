@@ -34,6 +34,7 @@ public class MainFormCtrl {
     public TextField presentMemberCntOutput;
     public TabPane tabs;
 
+
     public TextField accCreditOP;
     public TextField accExpireDateOP;
     public TextField accYearIO;
@@ -57,7 +58,7 @@ public class MainFormCtrl {
     public TableColumn<SellTransactionModel, String> sellProdCol;
     public Text dateString;
     public Text weekDay;
-
+    private Member foundMember;
     private int presentMemberCnt;
     public Button trainingBtn;
     public TextField membershipIdInput;
@@ -97,12 +98,13 @@ public class MainFormCtrl {
         sellProdCol.setCellValueFactory(cellData -> cellData.getValue().goodNameProperty());
 
 
-
         tabs.getSelectionModel().selectedItemProperty().addListener(
                 new ChangeListener<Tab>() {
                     @Override
                     public void changed(ObservableValue<? extends Tab> ov, Tab t, Tab t1) {
-                        if (t.getId() != null && t.getId().equals("5")) {
+                        if (t.getId() != null && t.getId().equals("5") && foundMember != null) {
+                            MemberDAO dao = new MemberDAO();
+                            dao.fullUpdate(foundMember);
                             System.out.println("hesab karbari");
                         }
 
@@ -125,6 +127,46 @@ public class MainFormCtrl {
         accSexCB.getItems().addAll("زن", "مرد");
         searchFieldCB.getItems().addAll("کد عضویت باشگاه", "کد ملی", "نام خانوادگی", "شماره همراه");
         searchFieldCB.getSelectionModel().selectFirst();
+        //search listener
+        accPhoneIO.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (foundMember != null && newValue != null) {
+                foundMember.setPhoneNo(newValue);
+            }
+        });
+        accFnameIO.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (foundMember != null && newValue != null) {
+                foundMember.setFirstName(newValue);
+            }
+        });
+        accLnameIO.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (foundMember != null && newValue != null) {
+                foundMember.setLastName(newValue);
+            }
+        });
+        accMelliCodeIO.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (foundMember != null && newValue != null) {
+                foundMember.setIdentificationNo(newValue);
+            }
+        });
+        accTelegramIO.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (foundMember != null && newValue != null) {
+                foundMember.setTelegramId(newValue);
+            }
+        });
+        accYearIO.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (foundMember != null && newValue != null) {
+                try {
+                    int newVal = Integer.parseInt(newValue);
+                    foundMember.setBirthYear(newVal);
+                }catch (NumberFormatException ex){
+                    ex.printStackTrace();
+                    return;
+                }
+            }
+        });
+
+
+
     }
 
     public void trainingClk(ActionEvent actionEvent) {
@@ -300,7 +342,7 @@ public class MainFormCtrl {
 
         dialog.setResultConverter(b -> {
             if (b == buttonTypeConfirm) {
-                if (payCH.isSelected())return 1;
+                if (payCH.isSelected()) return 1;
                 else return 0;
             } else if (b == buttonTypeIgnore) {
                 return -1;
@@ -318,9 +360,9 @@ public class MainFormCtrl {
             Dialog<Integer> exit = leaveTrainingDialog(session);
             Optional<Integer> payed = exit.showAndWait();
 
-            if (payed.get() == 0 && !session.getMember().isMonthly()){
-                session.getMember().increaseCredit(- Besmellah.setting.getJalase());//-- pardakht nashode
-            }else if (payed.get() == -1){
+            if (payed.get() == 0 && !session.getMember().isMonthly()) {
+                session.getMember().increaseCredit(-Besmellah.setting.getJalase());//-- pardakht nashode
+            } else if (payed.get() == -1) {
                 return;
             }
             tt.setLeavingTime(session.getLeavingTime());
@@ -337,20 +379,21 @@ public class MainFormCtrl {
 
     public void searchClk(ActionEvent actionEvent) {
         MemberDAO dao = new MemberDAO();
+        if (foundMember != null) {
+            dao.fullUpdate(foundMember);
+        }
         ArrayList<Member> members = new ArrayList<>();
         int id = 0, idx = searchFieldCB.getSelectionModel().getSelectedIndex();
         String key = searchInput.getText().trim();
 
-        if (key.length() == 0)return;
+        if (key.length() == 0) return;
         try {
             id = Integer.parseInt(key);
-        }catch (NumberFormatException ex){
+        } catch (NumberFormatException ex) {
             System.out.println("NFEx");
-            if (idx != 2 && idx != 3 )return;
+            if (idx != 2 && idx != 3) return;
         }
-
-
-        switch (idx){
+        switch (idx) {
             case 0:
                 members.add(dao.findByClubID(id));
                 break;
@@ -363,30 +406,36 @@ public class MainFormCtrl {
             case 3:
                 members.add(dao.findByPhone(key));
         }
-        Member member = members.get(0);
-        if (member == null)return;
-        if (members.size() > 0){
-            accFnameIO.setText(member.getFirstName());
-            accLnameIO.setText(member.getLastName());
-            accMelliCodeIO.setText(member.getIdentificationNo());
-            accPhoneIO.setText(member.getPhoneNo());
-            accClubIdOP.setText(member.getClubID()+"");
+        if (members.size() > 1) {
+            Dialog<Member> dialog = foundMembersDialog(members);
+            Optional<Member> res = dialog.showAndWait();
+            if (res.isPresent()) {
+                foundMember = res.get();
+            }
+        } else foundMember = members.get(0);
+        if (foundMember == null) return;
+        if (members.size() > 0) {
+            accFnameIO.setText(foundMember.getFirstName());
+            accLnameIO.setText(foundMember.getLastName());
+            accMelliCodeIO.setText(foundMember.getIdentificationNo());
+            accPhoneIO.setText(foundMember.getPhoneNo());
+            accClubIdOP.setText(foundMember.getClubID() + "");
 
-            accArebioticCH.setSelected(member.isAerobiotic());
-            accMonthlyCH.setSelected(member.isMonthly());
-            accBoxCH.setSelected(member.isBoxer());
-            accCreditOP.setText(member.getCredit()+"");
-            accPhoneIO.setText(member.getPhoneNo());
-            accTelegramIO.setText(member.getTelegramId());
-            accYearIO.setText(member.getBirthYear()+"");
-            if (member.isMonthly()){
-                SolarDate sd = new SolarDate(member.getExpireMembershipDate());
-                System.out.println(member.getExpireMembershipDate());
+            accArebioticCH.setSelected(foundMember.isAerobiotic());
+            accMonthlyCH.setSelected(foundMember.isMonthly());
+            accBoxCH.setSelected(foundMember.isBoxer());
+            accCreditOP.setText(foundMember.getCredit() + "");
+            accPhoneIO.setText(foundMember.getPhoneNo());
+            accTelegramIO.setText(foundMember.getTelegramId());
+            accYearIO.setText(foundMember.getBirthYear() + "");
+            if (foundMember.isMonthly()) {
+                SolarDate sd = new SolarDate(foundMember.getExpireMembershipDate());
+                System.out.println(foundMember.getExpireMembershipDate());
                 accExpireDateOP.setText(sd.toString());
-            }else accExpireDateOP.setText("جلسه‌ای");
-            accCreditOP.setText(member.getCredit()+"");
+            } else accExpireDateOP.setText("جلسه‌ای");
+            accCreditOP.setText(foundMember.getCredit() + "");
 
-            accSexCB.getSelectionModel().select(member.getGender()?1:0);
+            accSexCB.getSelectionModel().select(foundMember.getGender() ? 1 : 0);
         }
 
     }
@@ -394,4 +443,105 @@ public class MainFormCtrl {
     public void changeAvatarClk(ActionEvent actionEvent) {
         System.out.println("change Avatar");
     }
+
+    public Dialog<Member> foundMembersDialog(ArrayList<Member> mems) {
+
+        Dialog<Member> dialog = new Dialog<>();
+        dialog.setTitle("انتخاب شخص");
+        dialog.setHeaderText("چند نفر پیدا شندند، یکی را انتخاب کنید");
+        dialog.setResizable(false);
+
+        ComboBox<String> nameCB = new ComboBox<>();
+        for (Member member : mems) {
+            nameCB.getItems().add(member.getFullName());
+        }
+        nameCB.getSelectionModel().selectFirst();
+
+        nameCB.setVisibleRowCount(5);
+
+        GridPane grid = new GridPane();
+        grid.add(nameCB, 1, 3);
+        grid.setHgap(5);
+        grid.setVgap(5);
+        dialog.getDialogPane().setContent(grid);
+
+        ButtonType buttonTypeConfirm = new ButtonType("تایید", ButtonBar.ButtonData.OK_DONE);
+        ButtonType buttonTypeIgnore = new ButtonType("بی‌خیال", ButtonBar.ButtonData.CANCEL_CLOSE);
+        dialog.getDialogPane().getButtonTypes().add(buttonTypeConfirm);
+        dialog.getDialogPane().getButtonTypes().add(buttonTypeIgnore);
+
+        dialog.setResultConverter(b -> {
+            if (b == buttonTypeConfirm) {
+                int idx = nameCB.getSelectionModel().getSelectedIndex();
+                return mems.get(idx);
+            } else if (b == buttonTypeIgnore) {
+                return null;
+            }
+            return null;
+        });
+        return dialog;
+    }
+
+    public void accChangeCredit(ActionEvent actionEvent) {
+        if (foundMember == null) return;
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("تغییر اعتبار");
+        dialog.setHeaderText("مبلغ را وارد کنید");
+
+
+        // Traditional way to get the response value.
+        int value = 0;
+        Optional<String> result = dialog.showAndWait();
+        if (result.isPresent()) {
+            try {
+                value = Integer.parseInt(result.get());
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                return;
+            }
+            foundMember.increaseCredit(value);
+            accCreditOP.setText(foundMember.getCredit() + "");
+            MemberDAO dao = new MemberDAO();
+            dao.updateCredit(foundMember);
+        }
+    }
+
+    public void accGenderChange(ActionEvent actionEvent) {
+        if (foundMember == null)return;
+        foundMember.setGender(accSexCB.getSelectionModel().getSelectedIndex()==0?false:true);
+    }
+
+    public void accAirChange(ActionEvent actionEvent) {
+        if (foundMember == null)return;
+        int sign = 1;
+        if (accArebioticCH.isSelected())
+            sign = -1;
+        foundMember.increaseCredit(sign * Besmellah.setting.getAreobitic());
+        accCreditOP.setText(foundMember.getCredit()+"");
+    }
+
+    public void accBoxChange(ActionEvent actionEvent) {
+        if (foundMember == null)return;
+        int sign = 1;
+        if (accBoxCH.isSelected())
+            sign = -1;
+        foundMember.increaseCredit(sign * Besmellah.setting.getBox());
+        accCreditOP.setText(foundMember.getCredit()+"");
+    }
+
+    public void accMonthlyChange(ActionEvent actionEvent) {
+        if (foundMember == null)return;
+        if (accMonthlyCH.isSelected()){
+            foundMember.increaseCredit(-Besmellah.setting.getShahriye());
+            foundMember.setMonthly(true);
+            foundMember.setMembershipDate(new Date());//set expire date
+            accExpireDateOP.setText(new SolarDate(foundMember.getExpireMembershipDate())+"");
+        }else{
+
+        }
+        accCreditOP.setText(foundMember.getCredit()+"");
+    }
 }
+
+
+

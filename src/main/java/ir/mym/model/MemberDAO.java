@@ -121,8 +121,19 @@ public class MemberDAO {
         return false;
     }
 
-    public boolean delete(Member member) {
-        return false;
+    public void delete(Member member) {
+        Connection con = Besmellah.connector.getConnection();
+        try {
+            PreparedStatement stm = con.prepareStatement(
+                    "delete from member where id = ?");
+            stm.setInt(1, member.clubID);
+            stm.executeUpdate();
+            stm.close();
+            con.close();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     private Member extract(ResultSet rs) throws SQLException, ParseException {
@@ -314,4 +325,42 @@ public class MemberDAO {
             ex.printStackTrace();
         }
     }
+
+    public void fullUpdate(Member member) {
+        System.out.println("fullUp: "+member.getFullName());
+        int id = member.getClubID();
+        delete(member);
+        reinsert(member, id);
+//        insertMembershipInfo(member);
+//        insertMembershipHistory();
+    }
+
+    public void reinsert(Member member, int id){
+        Connection con = Besmellah.connector.getConnection();
+        try {
+            PreparedStatement stm = con.prepareStatement(
+                    "INSERT INTO member(fname, lname, melliCode, phoneNo, birthYear, telegramID, expireMembershipDate, registerDate, sex, credit, id) " +
+                            "VALUES (?,?,?,?,?,?, ?, ?, ?, ?, ?)");
+            stm.setString(1, member.getFirstName());
+            stm.setString(2, member.getLastName());
+            stm.setString(3, member.getIdentificationNo());
+            stm.setString(4, member.getPhoneNo());
+            stm.setInt(5, member.getBirthYear());
+            stm.setString(6, member.getTelegramId());
+            if (!member.isMonthly())
+                stm.setNull(7, 1);
+            else stm.setString(7, member.getExpireMembershipSQLDate() + "");
+            stm.setString(8, member.getRegisterSQLDate() + "");
+            stm.setBoolean(9, member.getGender());
+            stm.setInt(10, member.getCredit());
+            stm.setInt(11, id);
+
+            stm.executeUpdate();
+            stm.close();
+            con.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
 }

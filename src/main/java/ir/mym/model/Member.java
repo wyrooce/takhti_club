@@ -23,7 +23,9 @@ public class Member{//agha mojtaba
     public boolean gender;//true = male, false= female
     public Date registerDate;
     public Date expireMembershipDate;
+    public Date lastMembershipDate;
     public ArrayList<SportProgram> programs;
+
 
     public Member(String firstName, String lastName) {
         this.firstName = firstName;
@@ -32,7 +34,7 @@ public class Member{//agha mojtaba
 
         Calendar cal = Calendar.getInstance();
         cal.setTime(registerDate);
-        cal.add(Calendar.DATE, 30); //minus number would decrement the days
+        cal.add(Calendar.DATE, 31); //minus number would decrement the days
         expireMembershipDate = cal.getTime();
     }
 
@@ -160,8 +162,12 @@ public class Member{//agha mojtaba
         return expireMembershipDate;
     }
 
-    public void setExpireMembershipDate(Date expireMembershipDate) {
-        this.expireMembershipDate = expireMembershipDate;
+    public void setMembershipDate(Date membershipDate) {
+        lastMembershipDate = membershipDate;
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(membershipDate);
+        cal.add(Calendar.DATE, 31);
+        expireMembershipDate = cal.getTime();
     }
 
     public ArrayList<SportProgram> getPrograms() {
@@ -180,3 +186,5 @@ public class Member{//agha mojtaba
         return new java.sql.Date(expireMembershipDate.getTime());
     }
 }
+
+

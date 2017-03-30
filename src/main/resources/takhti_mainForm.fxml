@@ -139,7 +139,7 @@
                                     <Font size="24.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="searchInput" layoutX="13.0" layoutY="50.0" prefHeight="26.0" prefWidth="213.0">
+                              <TextField fx:id="searchInput" layoutX="13.0" layoutY="50.0" onAction="#searchClk" prefHeight="26.0" prefWidth="213.0">
                                  <font>
                                     <Font size="28.0" />
                                  </font></TextField>
@@ -188,13 +188,13 @@
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="تاریخ پایان عضویت" GridPane.rowIndex="6" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="سال تولد" GridPane.rowIndex="7" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="شماره همراه" GridPane.rowIndex="8" />
-                              <TextField fx:id="accCreditOP" editable="false" layoutX="180.0" layoutY="12.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="accCreditOP" editable="false" layoutX="180.0" layoutY="12.0" onAction="#accChangeCredit" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                               <TextField fx:id="accExpireDateOP" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                               <TextField fx:id="accYearIO" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                               <TextField fx:id="accPhoneIO" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                               <TextField fx:id="accTelegramIO" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="شناسه تلگرام" GridPane.rowIndex="9" />
-                              <ComboBox fx:id="accSexCB" prefHeight="26.0" prefWidth="210.0" promptText="مرد" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="accSexCB" onAction="#accGenderChange" prefHeight="26.0" prefWidth="210.0" promptText="مرد" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Text layoutX="10.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="نام خانوادگی" GridPane.rowIndex="3" />
                               <Text layoutX="10.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="نام" GridPane.rowIndex="2" />
                               <Text layoutX="10.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="کد ملی" GridPane.rowIndex="4" />
@@ -219,9 +219,9 @@
                         </TableView>
                         <VBox layoutX="40.0" layoutY="535.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="61.0" prefWidth="413.0">
                            <children>
-                              <CheckBox fx:id="accArebioticCH" mnemonicParsing="false" text="هوازی" />
-                              <CheckBox fx:id="accBoxCH" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="رینگ بوکس" />
-                              <CheckBox fx:id="accMonthlyCH" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" text="عضویت ماهانه" textAlignment="RIGHT">
+                              <CheckBox fx:id="accArebioticCH" mnemonicParsing="false" onAction="#accAirChange" text="هوازی" />
+                              <CheckBox fx:id="accBoxCH" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#accBoxChange" text="رینگ بوکس" />
+                              <CheckBox fx:id="accMonthlyCH" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" onAction="#accMonthlyChange" text="عضویت ماهانه" textAlignment="RIGHT">
                                  <opaqueInsets>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </opaqueInsets>

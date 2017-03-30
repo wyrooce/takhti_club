@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c16b95f5-02dc-4026-874f-93b19238a7dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/TstMain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/model/SessionDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/model/Setting.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/model/TodayTrainingModel.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/FxTableViewExample/FxTableViewExample1.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/FxTableViewExample/FxTableViewExample2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/FxTableViewExample/MyBook.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ir/mym/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ir/mym/model/TodayTraining.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ir/mym/MainApp.java" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/Besmellah.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/takhtiClubDB.db" afterPath="$PROJECT_DIR$/db/takhtiClubDB.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/mym/controller/MainFormCtrl.java" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/controller/MainFormCtrl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/mym/controller/RegisterCtrl.java" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/controller/RegisterCtrl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/mym/controller/TrainingCtrl.java" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/controller/TrainingCtrl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/mym/model/Connector.java" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/model/Connector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/mym/model/Member.java" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/model/Member.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/mym/model/MemberDAO.java" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/model/MemberDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/mym/model/Session.java" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/model/Session.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ir/mym/model/SolarDate.java" afterPath="$PROJECT_DIR$/src/main/java/ir/mym/model/SolarDate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/takhti_mainForm.fxml" afterPath="$PROJECT_DIR$/src/main/resources/takhti_mainForm.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/takhti_register.fxml" afterPath="$PROJECT_DIR$/src/main/resources/takhti_register.fxml" />
     </list>
     <ignored path="Takhti_Club.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,29 +33,28 @@
       <file leaf-file-name="MainFormCtrl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/controller/MainFormCtrl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="114" column="55" selection-start-line="114" selection-start-column="55" selection-end-line="114" selection-end-column="55" />
+            <state relative-caret-position="434">
+              <caret line="540" column="9" selection-start-line="540" selection-start-column="9" selection-end-line="540" selection-end-column="9" />
               <folding>
                 <element signature="docComment;class#MainFormCtrl#0" expanded="false" />
-                <element signature="class#3810:4161" expanded="false" />
-                <element signature="method#changed#0;class#3810:4161" expanded="false" />
                 <element signature="method#trainingClk#0;class#MainFormCtrl#0" expanded="false" />
                 <element signature="method#buyClk#0;class#MainFormCtrl#0" expanded="false" />
                 <element signature="method#registerClk#0;class#MainFormCtrl#0" expanded="false" />
                 <element signature="method#enterTrainingDialog#0;class#MainFormCtrl#0" expanded="false" />
                 <element signature="method#leaveTrainingDialog#0;class#MainFormCtrl#0" expanded="false" />
                 <element signature="method#leavingClubClk#0;class#MainFormCtrl#0" expanded="false" />
-                <element signature="method#searchClk#0;class#MainFormCtrl#0" expanded="false" />
+                <element signature="method#foundMembersDialog#0;class#MainFormCtrl#0" expanded="false" />
+                <element signature="method#accChangeCredit#0;class#MainFormCtrl#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SessionDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/model/SessionDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-178">
-              <caret line="119" column="80" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="80" />
+            <state relative-caret-position="693">
+              <caret line="130" column="24" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
               <folding>
                 <element signature="method#extract#0;class#SessionDAO#0" expanded="false" />
                 <marker date="1490620154031" expanded="true" signature="675:762" ph="select commo... session" />
@@ -88,20 +70,12 @@
       <file leaf-file-name="Member.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/model/Member.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+            <state relative-caret-position="1817">
+              <caret line="165" column="44" selection-start-line="165" selection-start-column="44" selection-end-line="165" selection-end-column="44" />
               <folding>
                 <element signature="docComment;class#Member#0" expanded="false" />
-                <element signature="e#1176#1177#0" expanded="true" />
-                <element signature="e#1212#1213#0" expanded="true" />
-                <element signature="e#1257#1258#0" expanded="true" />
-                <element signature="e#1289#1290#0" expanded="true" />
-                <element signature="e#2052#2053#0" expanded="true" />
-                <element signature="e#2090#2091#0" expanded="true" />
-                <element signature="e#2127#2128#0" expanded="true" />
-                <element signature="e#2160#2161#0" expanded="true" />
-                <element signature="e#3489#3490#0" expanded="true" />
-                <element signature="e#3532#3533#0" expanded="true" />
+                <element signature="e#1213#1214#0" expanded="true" />
+                <element signature="e#1249#1250#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,8 +84,8 @@
       <file leaf-file-name="takhti_mainForm.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/takhti_mainForm.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="222" column="55" selection-start-line="222" selection-start-column="53" selection-end-line="222" selection-end-column="55" />
+            <state relative-caret-position="177">
+              <caret line="223" column="130" selection-start-line="223" selection-start-column="130" selection-end-line="223" selection-end-column="130" />
               <folding />
             </state>
           </provider>
@@ -123,7 +97,7 @@
       <file leaf-file-name="RegisterCtrl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/controller/RegisterCtrl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="525">
               <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#RegisterCtrl#0" expanded="false" />
@@ -138,7 +112,7 @@
       <file leaf-file-name="takhti_register.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/takhti_register.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="1365">
               <caret line="65" column="180" selection-start-line="65" selection-start-column="180" selection-end-line="65" selection-end-column="180" />
               <folding />
             </state>
@@ -161,7 +135,7 @@
       <file leaf-file-name="Besmellah.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/Besmellah.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="231">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
@@ -171,7 +145,7 @@
       <file leaf-file-name="SolarDate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/model/SolarDate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="777">
               <caret line="199" column="64" selection-start-line="199" selection-start-column="64" selection-end-line="199" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -186,37 +160,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MemberDAO.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MemberDAO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/model/MemberDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="129" column="22" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="22" />
+            <state relative-caret-position="350">
+              <caret line="335" column="5" selection-start-line="335" selection-start-column="5" selection-end-line="335" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#MemberDAO#0" expanded="false" />
                 <element signature="method#exists#0;class#MemberDAO#0" expanded="false" />
                 <element signature="method#getId#0;class#MemberDAO#0" expanded="false" />
                 <element signature="method#insertMembershipInfo#0;class#MemberDAO#0" expanded="false" />
-                <element signature="method#insert#0;class#MemberDAO#0" expanded="false" />
+                <element signature="e#3500#3555#0" expanded="false" />
+                <element signature="method#extract#0;class#MemberDAO#0" expanded="false" />
                 <element signature="method#findByClubID#0;class#MemberDAO#0" expanded="false" />
                 <element signature="method#findByMelliCode#0;class#MemberDAO#0" expanded="false" />
                 <element signature="method#findByFamily#0;class#MemberDAO#0" expanded="false" />
-                <element signature="e#7461#7507#0" expanded="false" />
+                <element signature="e#7829#7875#0" expanded="false" />
                 <element signature="method#findByPhone#0;class#MemberDAO#0" expanded="false" />
                 <element signature="method#insertMembershipHistory#0;class#MemberDAO#0" expanded="false" />
                 <element signature="method#relatedInfo#0;class#MemberDAO#0" expanded="false" />
-                <marker date="1490803711040" expanded="false" signature="624:671" ph="select COUNT... member" />
-                <marker date="1490803711040" expanded="false" signature="1272:1313" ph="select id fr... member" />
-                <marker date="1490803711040" expanded="false" signature="1954:2078" ph="INSERT INTO registrationHistory... " />
-                <marker date="1490803711040" expanded="false" signature="2674:2864" ph="INSERT INTO member... " />
-                <marker date="1490803711040" expanded="false" signature="3500:3725" ph="//..." />
-                <marker date="1490803711040" expanded="false" signature="5458:5491" ph="select * fro... member" />
-                <marker date="1490803711040" expanded="false" signature="6141:6181" ph="select * fro... member" />
-                <marker date="1490803711040" expanded="false" signature="6889:6928" ph="select * fro... member" />
-                <marker date="1490803711040" expanded="false" signature="8436:8477" ph="select * fro... member" />
-                <marker date="1490803711040" expanded="false" signature="9124:9217" ph="insert into registrationHistory... " />
-                <marker date="1490803711040" expanded="false" signature="9713:9862" ph="select * fro... registrationHistory" />
-                <marker date="1490803711040" expanded="false" signature="9787:9861" ph="select max(d... registrationHistory" />
-                <marker date="1490803711040" expanded="true" signature="10544:10585" ph="UPDATE membe... " />
+                <element signature="method#updateCredit#0;class#MemberDAO#0" expanded="false" />
+                <element signature="method#reinsert#0;class#MemberDAO#0" expanded="false" />
+                <marker date="1490876611297" expanded="false" signature="624:671" ph="select COUNT... member" />
+                <marker date="1490876611297" expanded="false" signature="1272:1313" ph="select id fr... member" />
+                <marker date="1490876611297" expanded="false" signature="1954:2078" ph="INSERT INTO registrationHistory... " />
+                <marker date="1490876611297" expanded="false" signature="2674:2864" ph="INSERT INTO member... " />
+                <marker date="1490876611297" expanded="true" signature="4257:4288" ph="delete from " />
+                <marker date="1490876611297" expanded="false" signature="5826:5859" ph="select * fro... member" />
+                <marker date="1490876611297" expanded="false" signature="6509:6549" ph="select * fro... member" />
+                <marker date="1490876611297" expanded="false" signature="7257:7296" ph="select * fro... member" />
+                <marker date="1490876611297" expanded="false" signature="8804:8845" ph="select * fro... member" />
+                <marker date="1490876611297" expanded="false" signature="9492:9585" ph="insert into registrationHistory... " />
+                <marker date="1490876611297" expanded="false" signature="10081:10230" ph="select * fro... registrationHistory" />
+                <marker date="1490876611297" expanded="false" signature="10155:10229" ph="select max(d... registrationHistory" />
+                <marker date="1490876611297" expanded="false" signature="10912:10953" ph="UPDATE membe... " />
+                <marker date="1490876611297" expanded="true" signature="11704:11901" ph="INSERT INTO member... " />
               </folding>
             </state>
           </provider>
@@ -290,10 +268,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ir/mym/TstMain.java" />
         <option value="$PROJECT_DIR$/src/main/resources/takhti_mainForm.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/ir/mym/model/SolarDate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ir/mym/model/MemberDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ir/mym/model/Member.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ir/mym/controller/MainFormCtrl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ir/mym/controller/RegisterCtrl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/mym/controller/MainFormCtrl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/mym/model/Member.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ir/mym/model/MemberDAO.java" />
       </list>
     </option>
   </component>
@@ -349,7 +327,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/resources/takhti_register.fxml&#10;register&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/resources/takhti_register.fxml&#10;reg&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/controller/RegisterCtrl.java&#10;takhti&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/resources/takhti_mainForm.fxml&#10;dao&#9;PSI&#9;JAVA://ir.mym.model.SessionDAO&#10;main&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/controller/MainFormCtrl.java&#10;takht&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/resources/takhti_mainForm.fxml&#10;ma&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/TstMain.java&#10;sola&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/model/SolarDate.java&#10;tst&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/TstMain.java&#10;mem&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/model/Member.java&#10;re&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/controller/RegisterCtrl.java&#10;regi&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/controller/RegisterCtrl.java&#10;ta&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/resources/takhti_mainForm.fxml&#10;solar&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/model/SolarDate.java&#10;bes&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/Besmellah.java&#10;se&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/model/Session.java" />
+    <property name="SearchEverywhereHistoryKey" value="dao&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/model/MemberDAO.java&#10;register&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/resources/takhti_register.fxml&#10;reg&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/controller/RegisterCtrl.java&#10;takhti&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/resources/takhti_mainForm.fxml&#10;main&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/controller/MainFormCtrl.java&#10;takht&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/resources/takhti_mainForm.fxml&#10;ma&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/TstMain.java&#10;sola&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/model/SolarDate.java&#10;tst&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/TstMain.java&#10;mem&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/model/Member.java&#10;re&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/controller/RegisterCtrl.java&#10;regi&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/controller/RegisterCtrl.java&#10;ta&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/resources/takhti_mainForm.fxml&#10;solar&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/model/SolarDate.java&#10;bes&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/Besmellah.java&#10;se&#9;FILE&#9;file:///home/mym/IdeaProjects/Takhti_Club/src/main/java/ir/mym/model/Session.java" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -867,7 +845,8 @@
       <workItem from="1490606735967" duration="15905000" />
       <workItem from="1490673560591" duration="11683000" />
       <workItem from="1490778029610" duration="8186000" />
-      <workItem from="1490790749935" duration="12770000" />
+      <workItem from="1490790749935" duration="12860000" />
+      <workItem from="1490861283945" duration="8936000" />
     </task>
     <task id="LOCAL-00001" summary="17 esfand-mesal">
       <created>1488915056685</created>
@@ -911,11 +890,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490477516466</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="10 Farvardin, credit">
+      <created>1490819457540</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1490819457540</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158349000" />
+    <option name="totallyTimeSpent" value="167375000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -938,13 +924,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2968491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2968491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24542683" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -955,6 +940,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1001,20 +987,15 @@
     <MESSAGE value="3 Farvardin, ejra UI 2" />
     <MESSAGE value="4 Farvardin" />
     <MESSAGE value="5 Farvardin, dialog training" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 Farvardin, dialog training" />
+    <MESSAGE value="10 Farvardin, credit" />
+    <option name="LAST_COMMIT_MESSAGE" value="10 Farvardin, credit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ir/mym/controller/MainFormCtrl.java</url>
-          <line>352</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ir/mym/model/MemberDAO.java</url>
-          <line>139</line>
+          <line>150</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -1145,7 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1198,20 +1178,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1255#1256#0" expanded="false" />
-            <element signature="e#1284#1285#0" expanded="false" />
-            <element signature="e#1316#1317#0" expanded="false" />
-            <element signature="e#1347#1348#0" expanded="false" />
-            <element signature="e#1381#1382#0" expanded="false" />
-            <element signature="e#1414#1415#0" expanded="false" />
-            <element signature="e#1441#1442#0" expanded="false" />
-            <element signature="e#1467#1468#0" expanded="false" />
-            <element signature="e#1500#1501#0" expanded="false" />
-            <element signature="e#1532#1533#0" expanded="false" />
-            <marker date="1490619962387" expanded="true" signature="432:453" ph="select * fro... setting" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1250,11 +1216,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding>
-            <element signature="e#3489#3490#0" expanded="false" />
-            <element signature="e#5979#5980#0" expanded="false" />
-            <element signature="e#6010#6011#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1262,7 +1223,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
           <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1270,9 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="1657" column="0" selection-start-line="1657" selection-start-column="0" selection-end-line="1657" selection-end-column="0" />
-          <folding>
-            <element signature="e#66921#66922#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1281,39 +1238,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <element signature="docComment;class#SellTransactionModel#0" expanded="false" />
-            <element signature="e#349#350#0" expanded="false" />
-            <element signature="e#388#389#0" expanded="false" />
-            <element signature="e#438#439#0" expanded="false" />
-            <element signature="e#471#472#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#570#571#0" expanded="false" />
-            <element signature="e#605#606#0" expanded="false" />
-            <element signature="e#642#643#0" expanded="false" />
-            <element signature="e#690#691#0" expanded="false" />
-            <element signature="e#721#722#0" expanded="false" />
-            <element signature="e#769#770#0" expanded="false" />
-            <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#848#849#0" expanded="false" />
-            <element signature="e#886#887#0" expanded="false" />
-            <element signature="e#935#936#0" expanded="false" />
-            <element signature="e#967#968#0" expanded="false" />
-            <element signature="e#1017#1018#0" expanded="false" />
-            <element signature="e#1062#1063#0" expanded="false" />
-            <element signature="e#1096#1097#0" expanded="false" />
-            <element signature="e#1132#1133#0" expanded="false" />
-            <element signature="e#1179#1180#0" expanded="false" />
-            <element signature="e#1209#1210#0" expanded="false" />
-            <element signature="e#1255#1256#0" expanded="false" />
-            <element signature="e#1296#1297#0" expanded="false" />
-            <element signature="e#1328#1329#0" expanded="false" />
-            <element signature="e#1362#1363#0" expanded="false" />
-            <element signature="e#1407#1408#0" expanded="false" />
-            <element signature="e#1435#1436#0" expanded="false" />
-            <element signature="e#1477#1478#0" expanded="false" />
-            <element signature="e#1514#1515#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1337,7 +1261,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/Besmellah.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="231">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
@@ -1353,7 +1277,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/model/SolarDate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="777">
           <caret line="199" column="64" selection-start-line="199" selection-start-column="64" selection-end-line="199" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1367,20 +1291,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/takhti_mainForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="222" column="55" selection-start-line="222" selection-start-column="53" selection-end-line="222" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/takhti_register.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="1365">
           <caret line="65" column="180" selection-start-line="65" selection-start-column="180" selection-end-line="65" selection-end-column="180" />
           <folding />
         </state>
@@ -1389,43 +1302,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/model/MemberDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="129" column="22" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="22" />
-          <folding>
-            <element signature="docComment;class#MemberDAO#0" expanded="false" />
-            <element signature="method#exists#0;class#MemberDAO#0" expanded="false" />
-            <element signature="method#getId#0;class#MemberDAO#0" expanded="false" />
-            <element signature="method#insertMembershipInfo#0;class#MemberDAO#0" expanded="false" />
-            <element signature="method#insert#0;class#MemberDAO#0" expanded="false" />
-            <element signature="method#findByClubID#0;class#MemberDAO#0" expanded="false" />
-            <element signature="method#findByMelliCode#0;class#MemberDAO#0" expanded="false" />
-            <element signature="method#findByFamily#0;class#MemberDAO#0" expanded="false" />
-            <element signature="e#7461#7507#0" expanded="false" />
-            <element signature="method#findByPhone#0;class#MemberDAO#0" expanded="false" />
-            <element signature="method#insertMembershipHistory#0;class#MemberDAO#0" expanded="false" />
-            <element signature="method#relatedInfo#0;class#MemberDAO#0" expanded="false" />
-            <marker date="1490803711040" expanded="false" signature="624:671" ph="select COUNT... member" />
-            <marker date="1490803711040" expanded="false" signature="1272:1313" ph="select id fr... member" />
-            <marker date="1490803711040" expanded="false" signature="1954:2078" ph="INSERT INTO registrationHistory... " />
-            <marker date="1490803711040" expanded="false" signature="2674:2864" ph="INSERT INTO member... " />
-            <marker date="1490803711040" expanded="false" signature="3500:3725" ph="//..." />
-            <marker date="1490803711040" expanded="false" signature="5458:5491" ph="select * fro... member" />
-            <marker date="1490803711040" expanded="false" signature="6141:6181" ph="select * fro... member" />
-            <marker date="1490803711040" expanded="false" signature="6889:6928" ph="select * fro... member" />
-            <marker date="1490803711040" expanded="false" signature="8436:8477" ph="select * fro... member" />
-            <marker date="1490803711040" expanded="false" signature="9124:9217" ph="insert into registrationHistory... " />
-            <marker date="1490803711040" expanded="false" signature="9713:9862" ph="select * fro... registrationHistory" />
-            <marker date="1490803711040" expanded="false" signature="9787:9861" ph="select max(d... registrationHistory" />
-            <marker date="1490803711040" expanded="true" signature="10544:10585" ph="UPDATE membe... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/controller/RegisterCtrl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="525">
           <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
           <folding>
             <element signature="docComment;class#RegisterCtrl#0" expanded="false" />
@@ -1436,49 +1315,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/model/Member.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/takhti_mainForm.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-          <folding>
-            <element signature="docComment;class#Member#0" expanded="false" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
-            <element signature="e#2052#2053#0" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2127#2128#0" expanded="true" />
-            <element signature="e#2160#2161#0" expanded="true" />
-            <element signature="e#3489#3490#0" expanded="true" />
-            <element signature="e#3532#3533#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="177">
+          <caret line="223" column="130" selection-start-line="223" selection-start-column="130" selection-end-line="223" selection-end-column="130" />
+          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/controller/MainFormCtrl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="114" column="55" selection-start-line="114" selection-start-column="55" selection-end-line="114" selection-end-column="55" />
-          <folding>
-            <element signature="docComment;class#MainFormCtrl#0" expanded="false" />
-            <element signature="class#3810:4161" expanded="false" />
-            <element signature="method#changed#0;class#3810:4161" expanded="false" />
-            <element signature="method#trainingClk#0;class#MainFormCtrl#0" expanded="false" />
-            <element signature="method#buyClk#0;class#MainFormCtrl#0" expanded="false" />
-            <element signature="method#registerClk#0;class#MainFormCtrl#0" expanded="false" />
-            <element signature="method#enterTrainingDialog#0;class#MainFormCtrl#0" expanded="false" />
-            <element signature="method#leaveTrainingDialog#0;class#MainFormCtrl#0" expanded="false" />
-            <element signature="method#leavingClubClk#0;class#MainFormCtrl#0" expanded="false" />
-            <element signature="method#searchClk#0;class#MainFormCtrl#0" expanded="false" />
-          </folding>
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/model/SessionDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="119" column="80" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="80" />
+        <state relative-caret-position="693">
+          <caret line="130" column="24" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
           <folding>
             <element signature="method#extract#0;class#SessionDAO#0" expanded="false" />
             <marker date="1490620154031" expanded="true" signature="675:762" ph="select commo... session" />
@@ -1486,6 +1337,74 @@
             <marker date="1490620154031" expanded="true" signature="2484:2531" ph="UPDATE sessi... " />
             <marker date="1490620154031" expanded="true" signature="3055:3107" ph="SELECT SEQ f... sqlite_sequence" />
             <marker date="1490620154031" expanded="true" signature="3724:3783" ph="select commo... session" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/controller/MainFormCtrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="540" column="9" selection-start-line="540" selection-start-column="9" selection-end-line="540" selection-end-column="9" />
+          <folding>
+            <element signature="docComment;class#MainFormCtrl#0" expanded="false" />
+            <element signature="method#trainingClk#0;class#MainFormCtrl#0" expanded="false" />
+            <element signature="method#buyClk#0;class#MainFormCtrl#0" expanded="false" />
+            <element signature="method#registerClk#0;class#MainFormCtrl#0" expanded="false" />
+            <element signature="method#enterTrainingDialog#0;class#MainFormCtrl#0" expanded="false" />
+            <element signature="method#leaveTrainingDialog#0;class#MainFormCtrl#0" expanded="false" />
+            <element signature="method#leavingClubClk#0;class#MainFormCtrl#0" expanded="false" />
+            <element signature="method#foundMembersDialog#0;class#MainFormCtrl#0" expanded="false" />
+            <element signature="method#accChangeCredit#0;class#MainFormCtrl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/model/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1817">
+          <caret line="165" column="44" selection-start-line="165" selection-start-column="44" selection-end-line="165" selection-end-column="44" />
+          <folding>
+            <element signature="docComment;class#Member#0" expanded="false" />
+            <element signature="e#1213#1214#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ir/mym/model/MemberDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="335" column="5" selection-start-line="335" selection-start-column="5" selection-end-line="335" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#MemberDAO#0" expanded="false" />
+            <element signature="method#exists#0;class#MemberDAO#0" expanded="false" />
+            <element signature="method#getId#0;class#MemberDAO#0" expanded="false" />
+            <element signature="method#insertMembershipInfo#0;class#MemberDAO#0" expanded="false" />
+            <element signature="e#3500#3555#0" expanded="false" />
+            <element signature="method#extract#0;class#MemberDAO#0" expanded="false" />
+            <element signature="method#findByClubID#0;class#MemberDAO#0" expanded="false" />
+            <element signature="method#findByMelliCode#0;class#MemberDAO#0" expanded="false" />
+            <element signature="method#findByFamily#0;class#MemberDAO#0" expanded="false" />
+            <element signature="e#7829#7875#0" expanded="false" />
+            <element signature="method#findByPhone#0;class#MemberDAO#0" expanded="false" />
+            <element signature="method#insertMembershipHistory#0;class#MemberDAO#0" expanded="false" />
+            <element signature="method#relatedInfo#0;class#MemberDAO#0" expanded="false" />
+            <element signature="method#updateCredit#0;class#MemberDAO#0" expanded="false" />
+            <element signature="method#reinsert#0;class#MemberDAO#0" expanded="false" />
+            <marker date="1490876611297" expanded="false" signature="624:671" ph="select COUNT... member" />
+            <marker date="1490876611297" expanded="false" signature="1272:1313" ph="select id fr... member" />
+            <marker date="1490876611297" expanded="false" signature="1954:2078" ph="INSERT INTO registrationHistory... " />
+            <marker date="1490876611297" expanded="false" signature="2674:2864" ph="INSERT INTO member... " />
+            <marker date="1490876611297" expanded="true" signature="4257:4288" ph="delete from " />
+            <marker date="1490876611297" expanded="false" signature="5826:5859" ph="select * fro... member" />
+            <marker date="1490876611297" expanded="false" signature="6509:6549" ph="select * fro... member" />
+            <marker date="1490876611297" expanded="false" signature="7257:7296" ph="select * fro... member" />
+            <marker date="1490876611297" expanded="false" signature="8804:8845" ph="select * fro... member" />
+            <marker date="1490876611297" expanded="false" signature="9492:9585" ph="insert into registrationHistory... " />
+            <marker date="1490876611297" expanded="false" signature="10081:10230" ph="select * fro... registrationHistory" />
+            <marker date="1490876611297" expanded="false" signature="10155:10229" ph="select max(d... registrationHistory" />
+            <marker date="1490876611297" expanded="false" signature="10912:10953" ph="UPDATE membe... " />
+            <marker date="1490876611297" expanded="true" signature="11704:11901" ph="INSERT INTO member... " />
           </folding>
         </state>
       </provider>
